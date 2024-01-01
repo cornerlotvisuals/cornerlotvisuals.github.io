@@ -1,0 +1,48 @@
+	.prev-client {
+		text-align: center;
+		margin: 50px auto; /* Adjust the top margin as needed, and set auto for horizontal centering */
+		padding: 20px; /* Optional: Add padding for better appearance */
+		max-width: 800px; /* Optional: Set a maximum width for the content */
+		box-sizing: border-box;
+		height: 100vh;
+	}
+
+	.prev-client p {
+		font-family: var(--font-family);
+		color: var(--secondary-color);
+		font-size: var(--title-text-size);
+		margin-bottom: 10px;
+	}
+
+	.client-columns {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.client-list {
+		list-style: none;
+		padding: 0;
+		text-align: left;
+		width: 30%; /* Adjust the width as needed */
+		box-sizing: border-box;
+	}
+
+	.client-list li {
+		font-size: var(--list-text-size);
+		font-family: var(--font-family);
+		color: var(--secondary-color);
+		margin-bottom: 10px;
+	}
+
+	/* Responsive styling for smaller screens */
+	@media (max-width: 768px) {
+		.client-columns {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.client-list {
+			width: 80%;
+			margin-bottom: 10px;
+		}
+	}

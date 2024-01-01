@@ -28,6 +28,8 @@
 		display: flex;
 		flex-direction: column;
 		background-color: var(--primary-color);
+		scroll-behavior: smooth; /* Add smooth scrolling behavior */
+		overscroll-behavior: contain; /* Contain overscroll effect */
 	}
 
 	#topNavigation {
@@ -78,11 +80,4 @@
 
 	#navigationLinks {
 		display: flex;
-	}
-
-	main {
-		flex: 1;
-		margin: 20px;
-		margin-top: 80px;
-		height: 100vh;
 	}
