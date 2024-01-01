@@ -1,0 +1,135 @@
+	.paragraph {
+		opacity: 0;
+		transform: scale(1.05);
+		animation: zoomInFadeIn 0.8s ease-out forwards;
+		color: var(--secondary-color);
+	}
+
+	@keyframes zoomInFadeIn {
+		0% {
+			opacity: 0;
+			transform: scale(1.05);
+		}
+
+		100% {
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+
+	#categoryButtons {
+		display: flex;
+		margin-bottom: 0px;
+	}
+
+	#categoryButtons p {
+		margin-right: 10px;
+	}
+
+	#categoryButtons button {
+		font-family: var(--font-family);
+		font-size: var(--button-font-size);
+		padding: 8px;
+		margin-right: 0px;
+		cursor: pointer;
+		border: none;
+		background: none;
+		color: var(--secondary-color);
+		text-decoration: none;
+		transition: all 0.3s ease;
+	}
+
+	#categoryButtons button:hover,
+	#categoryButtons button.active {
+		font-weight: bold;
+		text-decoration: underline;
+		color: var(--tertiary-color);
+	}
+
+	#gallery {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 20px;
+		margin: auto;
+	}
+
+	.portfolio-img-inner {
+		position: relative;
+		width: 600px;
+		height: 338px;
+		overflow: hidden;
+		margin-bottom: 0px;
+		transition: all 0.3s ease;
+	}
+
+	.portfolio-img-inner.hidden {
+		opacity: 0;
+		transition-delay: 0.1s;
+	}
+
+	.portfolio-img-inner img,
+	.portfolio-img-inner video {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		position: absolute;
+		top: 0;
+		left: 0;
+		cursor: pointer;
+		transition: filter 0.3s ease;
+		backface-visibility: hidden;
+	}
+
+	.portfolio-img-inner:hover>img,
+	.portfolio-img-inner:hover>video {
+		filter: brightness(80%);
+	}
+
+	.overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		opacity: 0;
+		transition: opacity 0.3s ease;
+	}
+
+	.portfolio-img-inner:hover .overlay {
+		opacity: 1;
+	}
+
+	.overlay-text {
+		color: var(--secondary-color);
+		font-size: var(--overlay-text-size);
+		font-weight: bold;
+	}
+
+	/* Media query for large screens: */
+	@media only screen and (min-width: 1891px) and (max-width: 2500px) {
+		.portfolio-img-inner {
+			width: calc(33.33% - 20px);
+			height: calc((33.33vw - 20px) * 9 / 16);
+		}
+	}
+
+	/* Media query for medium screens: */
+	@media only screen and (max-width: 1880px) {
+		.portfolio-img-inner {
+			width: calc(50% - 20px);
+			height: calc((50vw - 20px) * 9 / 16);
+		}
+	}
+
+	/* Media query for smaller screens: */
+	@media only screen and (max-width: 1259px) {
+		.portfolio-img-inner {
+			width: 100%;
+			height: calc(100vw * 9 / 16);
+		}
+	}

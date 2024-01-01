@@ -1,0 +1,23 @@
+	#scrollTopButton {
+		display: none;
+		position: fixed;
+		bottom: 20px;
+		right: 20px;
+		width: 40px;
+		height: 40px;
+		padding: 0;
+		background-color: var(--secondary-color);
+		color: #fff;
+		border: none;
+		border-radius: 50%;
+		cursor: pointer;
+		transition: opacity 0.3s ease, transform 0.3s ease;
+	}
+
+	#scrollTopButton:hover {
+		background-color: var(--tertiary-color);
+	}
+
+	#scrollTopButton.visible {
+		display: block;
+	}

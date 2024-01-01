@@ -1,0 +1,15 @@
+.copyright-footer {
+    background-color: var(--primary-color);
+    text-align: center;
+    padding: 10px;
+    position: relative;
+}
+
+.copyright-footer::before {
+    content: '\00a9 2024 - CLV All Rights Reserved.';
+    color: var(--secondary-color);
+    font-size: var(--button-font-size);
+    font-family: var(--font-family);
+    display: block;
+    margin: 0;
+}

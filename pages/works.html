@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Cache-Control" content="max-age=3600, public, stale-while-revalidate=604800">
+    <title>Portfolio - CLV</title>
+	<meta http-equiv="Permissions-Policy" content="interest-cohort=(), user-id=()" />
+	<link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap">
+    <link rel="stylesheet" href="../css/root.css">
+	<link rel="stylesheet" href="../css/works.css">
+	<link rel="stylesheet" href="../css/totop.css">
+	<link rel="stylesheet" href="../css/footer.css">
+</head>
+
+<body>
+
+<div id="topNavigation">
+        <div id="logo">
+        <a href="../index.html">
+			<img src="../images/logo.svg" alt="Company Logo" type="image/svg+xml">
+		</a>
+        </div>
+        <div id="navigationButtons">
+			<button onclick="window.location.href='works.html'">Works</button>
+            <button onclick="window.location.href='about.html'">About</button>
+			<button onclick="window.location.href='form.html'">Contact Us</button>
+        </div>
+    </div>
+
+<main>
+
+    <div id="categoryButtons">
+        <p class="paragraph">SELECTED WORKS</p>
+        <button onclick="filterArtworks(this, 'all')" class="active" data-category="all">All</button>
+        <button onclick="filterArtworks(this, 'corporate')">Corporate</button>
+        <button onclick="filterArtworks(this, 'sports')">Sports</button>
+        <button onclick="filterArtworks(this, 'music')">Music Video</button>
+		<button onclick="filterArtworks(this, 'lyric')">Lyric Video</button>
+        <!-- Add more buttons for additional categories -->
+    </div>
+
+    <div id="gallery">
+        <!-- artwork entries  -->
+        <div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
+            data-category="lyric">
+            <img src="../vidprev/kamarsepi.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-40" loading="lazy">
+            <video muted playsinline loop class="projvd small playing" id="portfolio-video-40" loading="lazy">
+                <source src="../vidprev/kamarsepi.mp4?v=1" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="kamarsepi.html">
+                <div class="overlay">
+                    <div class="overlay-text">Affizy Khairy - Kamar Sepi</div>
+                </div>
+            </a>
+        </div>
+
+        <div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
+            data-category="music">
+            <img src="../vidprev/makhluknusantara.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-39" loading="lazy">
+            <video muted playsinline loop class="projvd small playing" id="portfolio-video-39" loading="lazy">
+                <source src="../vidprev/makhluknusantara.mp4?v=1" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="makhluknusantara.html">
+                <div class="overlay">
+                    <div class="overlay-text">mubinikki - Makhluk Nusantara ft. HXSAD</div>
+                </div>
+            </a>
+        </div>
+
+        <div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
+            data-category="music">
+            <img src="../vidprev/Noir.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-38" loading="lazy">
+            <video muted playsinline loop class="projvd small playing" id="portfolio-video-38" loading="lazy">
+                <source src="../vidprev/Noir.mp4?v=1" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="Noir.html">
+                <div class="overlay">
+                    <div class="overlay-text">NOIR - FareedPF feat GNello MK KCLIQUE  Axel IYB Midnight MassMusic</div>
+                </div>
+            </a>
+        </div>
+		
+		<div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
+            data-category="music">
+            <img src="../vidprev/Benzer.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-37" loading="lazy">
+            <video muted playsinline loop class="projvd small playing" id="portfolio-video-37" loading="lazy">
+                <source src="../vidprev/Benzer.mp4?v=1" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="Benzer.html">
+                <div class="overlay">
+                    <div class="overlay-text">Luciano Raps - Benzer</div>
+                </div>
+            </a>
+        </div>
+		
+		<div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
+            data-category="music">
+            <img src="../vidprev/mamakflex.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-36" loading="lazy">
+            <video muted playsinline loop class="projvd small playing" id="portfolio-video-36" loading="lazy">
+                <source src="../vidprev/mamakflex.mp4?v=1" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="mamakflex.html">
+                <div class="overlay">
+                    <div class="overlay-text">MassMusic Ft AKID and Ninjaboi - MAMAK FLEX</div>
+                </div>
+            </a>
+        </div>
+		
+		<div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
+            data-category="music">
+            <img src="../vidprev/pride.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-35" loading="lazy">
+            <video muted playsinline loop class="projvd small playing" id="portfolio-video-35" loading="lazy">
+                <source src="../vidprev/pride.mp4?v=1" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="pride.html">
+                <div class="overlay">
+                    <div class="overlay-text">PRIDE - Giant Prayudha x TT</div>
+                </div>
+            </a>
+        </div>
+		
+		<div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
+            data-category="music">
+            <img src="../vidprev/oldtown.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-34" loading="lazy">
+            <video muted playsinline loop class="projvd small playing" id="portfolio-video-34" loading="lazy">
+                <source src="../vidprev/oldtown.mp4?v=1" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="oldtown.html">
+                <div class="overlay">
+                    <div class="overlay-text">MassMusic - Old Town Road</div>
+                </div>
+            </a>
+        </div>
+		
+		<div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
+            data-category="music">
+            <img src="../vidprev/takemetoearth.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-33" loading="lazy">
+            <video muted playsinline loop class="projvd small playing" id="portfolio-video-33" loading="lazy">
+                <source src="../vidprev/takemetoearth.mp4?v=1" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="takemetoearth.html">
+                <div class="overlay">
+                    <div class="overlay-text">mubinikki - Take Me To Earth</div>
+                </div>
+            </a>
+        </div>
+		
+		<div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
+            data-category="music">
+            <img src="../vidprev/roaches.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-32" loading="lazy">
+            <video muted playsinline loop class="projvd small playing" id="portfolio-video-32" loading="lazy">
+                <source src="../vidprev/roaches.mp4?v=1" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="roaches.html">
+                <div class="overlay">
+                    <div class="overlay-text">MassMusic Alan D Axel Jonas and Iyb Midnight - Roaches</div>
+                </div>
+            </a>
+        </div>
+		
+		<div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
+            data-category="music">
+            <img src="../vidprev/inmylife.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-31" loading="lazy">
+            <video muted playsinline loop class="projvd small playing" id="portfolio-video-31" loading="lazy">
+                <source src="../vidprev/inmylife.mp4?v=1" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="inmylife.html">
+                <div class="overlay">
+                    <div class="overlay-text">Raichiki - Inherlife feat Apek G</div>
+                </div>
+            </a>
+        </div>
+		
+		<div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
+            data-category="lyric">
+            <img src="../vidprev/terbang.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-30" loading="lazy">
+            <video muted playsinline loop class="projvd small playing" id="portfolio-video-30" loading="lazy">
+                <source src="../vidprev/terbang.mp4?v=1" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="terbang.html">
+                <div class="overlay">
+                    <div class="overlay-text">Abubakarxli - Terbang feat Airliftz  Zet Legacy</div>
+                </div>
+            </a>
+        </div>
+		
+		<div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
+            data-category="lyric">
+            <img src="../vidprev/emosi.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-29" loading="lazy">
+            <video muted playsinline loop class="projvd small playing" id="portfolio-video-29" loading="lazy">
+                <source src="../vidprev/emosi.mp4?v=1" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="emosi.html">
+                <div class="overlay">
+                    <div class="overlay-text">Eemrun - Emosi</div>
+                </div>
+            </a>
+        </div>
+		
+		<div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
+            data-category="lyric">
+            <img src="../vidprev/slmt.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-28" loading="lazy">
+            <video muted playsinline loop class="projvd small playing" id="portfolio-video-28" loading="lazy">
+                <source src="../vidprev/slmt.mp4?v=1" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="slmt.html">
+                <div class="overlay">
+                    <div class="overlay-text">B-Heart - SLMT</div>
+                </div>
+            </a>
+        </div>
+		
+		<div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
+            data-category="lyric">
+            <img src="../vidprev/palsu.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-27" loading="lazy">
+            <video muted playsinline loop class="projvd small playing" id="portfolio-video-27" loading="lazy">
+                <source src="../vidprev/palsu.mp4?v=1" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="palsu.html">
+                <div class="overlay">
+                    <div class="overlay-text">Ashtin x Sabbala x Sxph - Palsu</div>
+                </div>
+            </a>
+        </div>
+		
+		<div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
+            data-category="lyric">
+            <img src="../vidprev/photograph.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-26" loading="lazy">
+            <video muted playsinline loop class="projvd small playing" id="portfolio-video-26" loading="lazy">
+                <source src="../vidprev/photograph.mp4?v=1" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="photograph.html">
+                <div class="overlay">
+                    <div class="overlay-text">AxelJonas Alan D  ILYAS - Photograph</div>
+                </div>
+            </a>
+        </div>
+		
+		<div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
+            data-category="lyric">
+            <img src="../vidprev/ulang.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-25" loading="lazy">
+            <video muted playsinline loop class="projvd small playing" id="portfolio-video-25" loading="lazy">
+                <source src="../vidprev/ulang.mp4?v=1" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="ulang.html">
+                <div class="overlay">
+                    <div class="overlay-text">AxelJonas, Alan D, IYB. Midnight ,FareedPF, TujuLoca and Aliana Azizi- ULANG</div>
+                </div>
+            </a>
+        </div>
+		
+		<div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
+            data-category="lyric">
+            <img src="../vidprev/sevilla.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-24" loading="lazy">
+            <video muted playsinline loop class="projvd small playing" id="portfolio-video-24" loading="lazy">
+                <source src="../vidprev/sevilla.mp4?v=1" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="sevilla.html">
+                <div class="overlay">
+                    <div class="overlay-text">MassMusic- Sevilla</div>
+                </div>
+            </a>
+        </div>
+		
+		<div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
+            data-category="lyric">
+            <img src="../vidprev/situations.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-23" loading="lazy">
+            <video muted playsinline loop class="projvd small playing" id="portfolio-video-23" loading="lazy">
+                <source src="../vidprev/situations.mp4?v=1" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="situations.html">
+                <div class="overlay">
+                    <div class="overlay-text">MassMusic - Situations</div>
+                </div>
+            </a>
+        </div>
+		
+		<div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
+            data-category="lyric">
+            <img src="../vidprev/btsKT.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-22" loading="lazy">
+            <video muted playsinline loop class="projvd small playing" id="portfolio-video-22" loading="lazy">
+                <source src="../vidprev/btsKT.mp4?v=1" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="btsKT.html">
+                <div class="overlay">
+                    <div class="overlay-text">SonaOne - Kuey Teow ft. Kidd Santhe (Behind The Scenes)</div>
+                </div>
+            </a>
+        </div>
+		
+		<div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
+            data-category="lyric">
+            <img src="../vidprev/btstakterganti.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-21" loading="lazy">
+            <video muted playsinline loop class="projvd small playing" id="portfolio-video-21" loading="lazy">
+                <source src="../vidprev/btstakterganti.mp4?v=1" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="btstakterganti.html">
+                <div class="overlay">
+                    <div class="overlay-text">ALVN.official - Tak Terganti</div>
+                </div>
+            </a>
+        </div>
+		
+		<div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
+            data-category="corperate">
+            <img src="../vidprev/naviAP.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-20" loading="lazy">
+            <video muted playsinline loop class="projvd small playing" id="portfolio-video-20" loading="lazy">
+                <source src="../vidprev/naviAP.mp4?v=1" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="naviAP.html">
+                <div class="overlay">
+                    <div class="overlay-text">NA'VI After Party</div>
+                </div>
+            </a>
+        </div>
+		
+		<div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
+            data-category="corporate">
+            <img src="../vidprev/kaneAP.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-19" loading="lazy">
+            <video muted playsinline loop class="projvd small playing" id="portfolio-video-19" loading="lazy">
+                <source src="../vidprev/kaneAP.mp4?v=1" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="kaneAP.html">
+                <div class="overlay">
+                    <div class="overlay-text">Kane After Party</div>
+                </div>
+            </a>
+        </div>
+		
+		<div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
+            data-category="corporate">
+            <img src="../vidprev/nubeLP.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-18" loading="lazy">
+            <video muted playsinline loop class="projvd small playing" id="portfolio-video-18" loading="lazy">
+                <source src="../vidprev/nubeLP.mp4?v=1" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="nubeLP.html">
+                <div class="overlay">
+                    <div class="overlay-text">Nube Launch Party</div>
+                </div>
+            </a>
+        </div>
+		
+		<div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
+            data-category="corporate">
+            <img src="../vidprev/elementLP.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-17" loading="lazy">
+            <video muted playsinline loop class="projvd small playing" id="portfolio-video-17" loading="lazy">
+                <source src="../vidprev/elementLP.mp4?v=1" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="elementLP.html">
+                <div class="overlay">
+                    <div class="overlay-text">Elements Kuala Lumpur Launch</div>
+                </div>
+            </a>
+        </div>
+		
+		<div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
+            data-category="sports">
+            <img src="../vidprev/GSrunwiththestar.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-16" loading="lazy">
+            <video muted playsinline loop class="projvd small playing" id="portfolio-video-16" loading="lazy">
+                <source src="../vidprev/GSrunwiththestar.mp4?v=1" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="GSrunwiththestar.html">
+                <div class="overlay">
+                    <div class="overlay-text">Garmin Squad #RunWithTheStars</div>
+                </div>
+            </a>
+        </div>
+		
+		<div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
+            data-category="corporate">
+            <img src="../vidprev/KBSDIGTV.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-15" loading="lazy">
+            <video muted playsinline loop class="projvd small playing" id="portfolio-video-15" loading="lazy">
+                <source src="../vidprev/KBSDIGTV.mp4?v=1" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="KBSDIGTV.html">
+                <div class="overlay">
+                    <div class="overlay-text">PROMOSI PERTANDINGAN DIGITAL TRICK VIDEO DI MEDIA SOSIAL KBS</div>
+                </div>
+            </a>
+        </div>
+		
+		<div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
+            data-category="corporate">
+            <img src="../vidprev/fenix5L.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-14" loading="lazy">
+            <video muted playsinline loop class="projvd small playing" id="portfolio-video-14" loading="lazy">
+                <source src="../vidprev/fenix5L.mp4?v=1" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="fenix5L.html">
+                <div class="overlay">
+                    <div class="overlay-text">Garmin // FENIX 5 LAUNCH</div>
+                </div>
+            </a>
+        </div>
+		
+		<div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
+            data-category="corporate">
+            <img src="../vidprev/petco2018.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-13" loading="lazy">
+            <video muted playsinline loop class="projvd small playing" id="portfolio-video-13" loading="lazy">
+                <source src="../vidprev/petco2018.mp4?v=1" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="petco2018.html">
+                <div class="overlay">
+                    <div class="overlay-text">PETCO Virtual Trading 2018</div>
+                </div>
+            </a>
+        </div>
+		
+		<div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
+            data-category="corporate">
+            <img src="../vidprev/hafizatseminar.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-12" loading="lazy">
+            <video muted playsinline loop class="projvd small playing" id="portfolio-video-12" loading="lazy">
+                <source src="../vidprev/hafizatseminar.mp4?v=1" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="hafizatseminar.html">
+                <div class="overlay">
+                    <div class="overlay-text">Hafizzat Rusli Seminar</div>
+                </div>
+            </a>
+        </div>
+		
+		<div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
+            data-category="corporate">
+            <img src="../vidprev/NOIRsuccess.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-11" loading="lazy">
+            <video muted playsinline loop class="projvd small playing" id="portfolio-video-11" loading="lazy">
+                <source src="../vidprev/NOIRsuccess.mp4?v=1" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="NOIRsuccess.html">
+                <div class="overlay">
+                    <div class="overlay-text">Noir Beauty & Health - Successful Story</div>
+                </div>
+            </a>
+        </div>
+		
+		<div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
+            data-category="corporate">
+            <img src="../vidprev/kopathaL.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-10" loading="lazy">
+            <video muted playsinline loop class="projvd small playing" id="portfolio-video-10" loading="lazy">
+                <source src="../vidprev/kopathaL.mp4?v=1" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="kopathaL.html">
+                <div class="overlay">
+                    <div class="overlay-text">Kopatha Jewels Launch</div>
+                </div>
+            </a>
+        </div>
+		
+		<div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
+            data-category="sports">
+            <img src="../vidprev/jdxarmani.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-09" loading="lazy">
+            <video muted playsinline loop class="projvd small playing" id="portfolio-video-09" loading="lazy">
+                <source src="../vidprev/jdxarmani.mp4?v=1" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="jdxarmani.html">
+                <div class="overlay">
+                    <div class="overlay-text">JD Sports X Armani Kowachee</div>
+                </div>
+            </a>
+        </div>
+		
+		<div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
+            data-category="corporate">
+            <img src="../vidprev/lp2021.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-08" loading="lazy">
+            <video muted playsinline loop class="projvd small playing" id="portfolio-video-08" loading="lazy">
+                <source src="../vidprev/lp2021.mp4?v=1" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="lp2021.html">
+                <div class="overlay">
+                    <div class="overlay-text">Legasi Perwira 2021 Logo</div>
+                </div>
+            </a>
+        </div>
+		
+		<div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
+            data-category="corporate">
+            <img src="../vidprev/glamx.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-07" loading="lazy">
+            <video muted playsinline loop class="projvd small playing" id="portfolio-video-07" loading="lazy">
+                <source src="../vidprev/glamx.mp4?v=1" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="glamx.html">
+                <div class="overlay">
+                    <div class="overlay-text">GlamX Beauty</div>
+                </div>
+            </a>
+        </div>
+		
+		<div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
+            data-category="corporate">
+            <img src="../vidprev/bloconomic.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-06" loading="lazy">
+            <video muted playsinline loop class="projvd small playing" id="portfolio-video-06" loading="lazy">
+                <source src="../vidprev/bloconomic.mp4?v=1" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="bloconomic.html">
+                <div class="overlay">
+                    <div class="overlay-text">Alphacap Bloconomic 2019</div>
+                </div>
+            </a>
+        </div>
+		
+		<div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
+            data-category="corporate">
+            <img src="../vidprev/CIStyle.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-05" loading="lazy">
+            <video muted playsinline loop class="projvd small playing" id="portfolio-video-05" loading="lazy">
+                <source src="../vidprev/CIStyle.mp4?v=1" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="CIStyle.html">
+                <div class="overlay">
+                    <div class="overlay-text">Creative inStyle</div>
+                </div>
+            </a>
+        </div>
+		
+		<div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
+            data-category="corporate">
+            <img src="../vidprev/IGEMS.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-04" loading="lazy">
+            <video muted playsinline loop class="projvd small playing" id="portfolio-video-04" loading="lazy">
+                <source src="../vidprev/IGEMS.mp4?v=1" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="IGEMS.html">
+                <div class="overlay">
+                    <div class="overlay-text">Pelancaran Program insentif Generasi Muda Selangor (iGems)</div>
+                </div>
+            </a>
+        </div>
+		
+		<div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
+            data-category="corporate">
+            <img src="../vidprev/YAWASinfo.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-03" loading="lazy">
+            <video muted playsinline loop class="projvd small playing" id="portfolio-video-03" loading="lazy">
+                <source src="../vidprev/YAWASinfo.mp4?v=1" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="YAWASinfo.html">
+                <div class="overlay">
+                    <div class="overlay-text">YAWAS Infographics</div>
+                </div>
+            </a>
+        </div>
+		
+		<div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
+            data-category="corporate">
+            <img src="../vidprev/MGMinfo.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-02" loading="lazy">
+            <video muted playsinline loop class="projvd small playing" id="portfolio-video-02" loading="lazy">
+                <source src="../vidprev/MGMinfo.mp4?v=1" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="MGMinfo.html">
+                <div class="overlay">
+                    <div class="overlay-text">MyGovMobile Infographics</div>
+                </div>
+            </a>
+        </div>
+		
+		<div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
+            data-category="corporate">
+            <img src="../vidprev/snsinsta.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-01" loading="lazy">
+            <video muted playsinline loop class="projvd small playing" id="portfolio-video-01" loading="lazy">
+                <source src="../vidprev/snsinsta.mp4?v=1" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="snsinsta.html">
+                <div class="overlay">
+                    <div class="overlay-text">#Snack&Style Instameet</div>
+                </div>
+            </a>
+        </div>
+        <!-- Add more artworks with different categories as needed -->
+    </div>
+
+</main>
+	
+	<footer class="copyright-footer"></footer>
+
+
+	<button id="scrollTopButton" onclick="scrollToTop()"><svg role="img" viewBox="0 0 24 24" width="24" height="24" xmlns="http://www.w3.org/2000/svg"><title>Palo Alto Software</title><path d="M11.995.005c-.58 0-1.158.228-1.615.685L.685 10.385c-.913.913-.913 2.318 0 3.231l.842.843 8.01-8.15a3.435 3.435 0 0 1 4.847 0l8.079 8.08.842-.843c.914-.843.915-2.248.072-3.161L13.612.69a2.279 2.279 0 0 0-1.617-.685zm0 6.463c-.58 0-1.158.228-1.615.684L.685 16.848c-.913.913-.913 2.318 0 3.23l3.231 3.232c.914.913 2.318.913 3.232 0l4.847-4.846 4.848 4.846c.913.913 2.318.913 3.231 0l3.231-3.231c.914-.843.915-2.318.072-3.231l-9.765-9.696a2.279 2.279 0 0 0-1.617-.684z"/></svg></button>
+
+		<script src="../js/script-works.js" defer></script>
+
+</body>
+
+</html>
