@@ -1,0 +1,137 @@
+	#topNavigation {
+		position: fixed;
+		top: 0;
+		width: 100%;
+		height: 50px;
+		transition: height 0.5s ease;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 10px;
+		background-color: rgba(0, 0, 0, 0.3);
+		z-index: 1000;
+		-webkit-backdrop-filter: var(--banner-blur);
+		backdrop-filter: var(--banner-blur);
+	}
+	
+	#topNavigation #logo {
+		width: 120px;
+		height: auto;
+		margin-right: 20px;
+		margin-left: 10px;
+		filter: invert(1);
+	}
+
+	#topNavigation #navigationButtons {
+		display: flex;
+	}
+
+	#topNavigation button {
+		font-family: var(--font-family);
+		font-size: var(--main-button-font-size);
+		color: var(--secondary-color);
+		padding: 8px;
+		margin-right: 40px;
+		cursor: pointer;
+		border: none;
+		background: none;
+		text-decoration: none;
+		transition: all 0.3s ease;
+	}
+
+	#topNavigation button:hover,
+	#topNavigation button.active {
+		font-weight: bold;
+		text-decoration: underline;
+		color: var(--tertiary-color);
+	}
+
+	#navigationLinks {
+		display: flex;
+	}
+	
+	@media screen and (max-width: 768px) {
+		
+	#topNavigation.active {
+		position: fixed;
+		top: 0;
+		width: 100%;
+		height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 10px;
+		background-color: rgba(0, 0, 0, 0.3);
+		z-index: 1000;
+		-webkit-backdrop-filter: var(--banner-blur);
+		backdrop-filter: var(--banner-blur);
+	}
+	
+	#topNavigation #navigationButtons {
+        display: none; /* Hide buttons in normal view */
+    }
+	
+	#topNavigation.active #navigationButtons {
+        display: flex; /* Show buttons in hamburger menu view */
+		flex-direction: column; /* Display buttons in a column */
+    }
+
+	
+    #navigationButtons {
+        display: none;
+    }
+
+    #hamburgerMenu {
+        display: block;
+        cursor: pointer;
+		margin-right: 30px;
+        width: 20px;
+        height: 20px;
+        position: relative;
+    }
+
+    #hamburgerMenu .bar {
+        width: 100%;
+        height: 2px;
+        background-color: var(--secondary-color);
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+	
+	#topNavigation.active #hamburgerMenu .bar {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+    #topNavigation.active #hamburgerMenu .bar:nth-child(1) {
+		transform: rotateZ(-45deg);
+	}
+
+	#topNavigation.active #hamburgerMenu .bar:nth-child(2) {
+		transform: rotateZ(45deg);
+	}
+
+
+    #navigationLinks {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 999;
+    }
+
+    #topNavigation.active #navigationLinks {
+        display: flex;
+    }
+
+    #navigationLinks button {
+        margin: 0;
+        margin-right: 0;
+    }
+}
+
