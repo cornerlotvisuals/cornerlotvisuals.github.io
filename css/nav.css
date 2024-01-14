@@ -26,6 +26,7 @@
 
 	#topNavigation #navigationButtons {
 		display: flex;
+		margin-left: auto; /* Add this line to push buttons to the right */
 	}
 
 	#topNavigation button {
@@ -120,12 +121,14 @@
 		transform: translateY(-150%);
 		transition: all 0.8s ease;
 		animation: fadeOut 0.3s;
+		margin-left: 0;
     }
 
     #topNavigation.active #navigationButtons {
         display: flex; /* Show buttons in hamburger menu view */
         flex-direction: column; /* Display buttons in a column */
         animation: slideInFromTop 0.8s ease, fadeIn 0.3s ease;
+		margin-left: 0;
     }
 	
 	#topNavigation:not(.active) button {
