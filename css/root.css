@@ -9,13 +9,13 @@
 
 	:root {
 		--font-family: 'Montserrat', sans-serif;
-		--button-font-size: 10px;
-		--main-button-font-size: 15px;
-		--title-text-size: 30px;
-		--description-text-size: 20px;
-		--list-text-size: 12px;
-		--overlay-text-size: 18px;
-		--banner-blur: blur(5px);
+		--button-font-size: 0.625rem; /* 10px */
+		--main-button-font-size: 0.9375rem;  /* 15px */
+		--title-text-size: 1.875rem;  /* 30px */
+		--description-text-size: 1.25rem;  /* 20px */
+		--list-text-size: 0.75rem;  /* 12px */
+		--overlay-text-size: 1.125rem;  /* 18px */
+		--banner-blur: blur(5px);  /* 5px */
 		--primary-color: #1d1d1d;
 		--secondary-color: #fdfdfd;
 		--tertiary-color: #ffbf19;

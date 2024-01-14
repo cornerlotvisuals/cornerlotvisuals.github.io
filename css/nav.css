@@ -1,9 +1,10 @@
 	#topNavigation {
 		position: fixed;
 		top: 0;
-		width: 100%;
+		left: 0;
+		right: 0;
 		height: 50px;
-		transition: height 0.5s ease;
+		transition: height 0.5s ease, all 0.6s ease; /* Combine transitions */
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -12,16 +13,15 @@
 		z-index: 1000;
 		-webkit-backdrop-filter: var(--banner-blur);
 		backdrop-filter: var(--banner-blur);
-		transition: all 0.6s ease;
 	}
-	
+
 	#topNavigation #logo {
 		width: 120px;
 		height: auto;
 		margin-right: 20px;
 		margin-left: 10px;
 		filter: invert(1);
-		
+		transition: all 0.3s ease;
 	}
 
 	#topNavigation #navigationButtons {
@@ -51,81 +51,99 @@
 	#navigationLinks {
 		display: flex;
 	}
-	
-	@media screen and (max-width: 768px) {
-		
-		@keyframes fadeIn {
-  from {
-    opacity: 0;
-    visibility: hidden;
-  }
-  to {
-    opacity: 1;
-    visibility: visible;
-  }
-}
 
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-    visibility: visible;
-  }
-  to {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-		
-		@keyframes slideInFromTop {
-			from {
-    transform: translateY(-120%);
-		}
-			to {
-    transform: translateY(0);
-		}
-	}
-	
-	@keyframes slideOutToTop {
-			from {
-    transform: translateY(0);
-		}
-			to {
-    transform: translateY(-120%);
-		}
-	}
-		
-	#topNavigation.active {
-		position: fixed;
-		top: 0;
-		width: 100%;
-		height: 100vh;
-		display: flex;
-		align-items: flex-start;
-		justify-content: space-between;
-		padding-top: 15px;
-		background: rgba(0, 0, 0, 0.8);
-		z-index: 1000;
-		-webkit-backdrop-filter: var(--banner-blur);
-		backdrop-filter: var(--banner-blur);
-	}
-	
-	#topNavigation #navigationButtons {
-		animation: fadeOut 0.5s ease;
-        display: none; /* Hide buttons in normal view */
+@media only screen and (max-width: 1259px) {
+    @keyframes slideInFromTop {
+        from {
+            transform: translateY(-120%);
+        }
+        to {
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes slideOutToTop {
+        from {
+            transform: translateY(0);
+        }
+        to {
+            transform: translateY(-120%);
+        }
     }
 	
-	#topNavigation.active #navigationButtons {
-        display: flex; /* Show buttons in hamburger menu view */
+	@keyframes fadeIn {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+
+	@keyframes fadeOut {
+		0% {
+			opacity: 1;
+		}
+		100% {
+			opacity: 0;
+		}
+	}
+
+    #topNavigation.active {
+        position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+        height: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding-top: 20px;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 1000;
+        -webkit-backdrop-filter: var(--banner-blur);
+        backdrop-filter: var(--banner-blur);
+    }
+	
+	#topNavigation #logo {
+		width: 80px;
+		height: auto;
+		margin-right: 20px;
+		margin-left: 5px;
+		filter: invert(1);
+	}
+	
+
+    #topNavigation:not(.active) #navigationButtons {
+        display: flex;
 		flex-direction: column; /* Display buttons in a column */
-		animation: slideInFromTop 0.5s ease;
+		transform: translateY(-150%);
+		transition: all 0.8s ease;
+		animation: fadeOut 0.3s;
+    }
+
+    #topNavigation.active #navigationButtons {
+        display: flex; /* Show buttons in hamburger menu view */
+        flex-direction: column; /* Display buttons in a column */
+        animation: slideInFromTop 0.8s ease, fadeIn 0.3s ease;
+    }
+	
+	#topNavigation:not(.active) button {
+		padding-top: 60px;
+		font-size: 2rem;
+	}
+	
+	#topNavigation.active button {
+		padding-top: 60px;
+		font-size: 2rem;
 	}
 	
     #hamburgerMenu {
         display: block;
         cursor: pointer;
-		margin-right: 30px;
-        width: 20px;
-        height: 20px;
+        margin-right: 15px;
+        width: 30px;
+        height: 30px;
         position: relative;
     }
 
@@ -136,18 +154,19 @@
         margin: 6px 0;
         transition: 0.5s;
     }
-	
-	#topNavigation.active #hamburgerMenu .bar {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-	}
+
+    #topNavigation.active #hamburgerMenu .bar {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 
     #topNavigation.active #hamburgerMenu .bar:nth-child(1) {
-		transform: rotateZ(-45deg);
-	}
+        transform: rotateZ(-45deg);
+    }
 
-	#topNavigation.active #hamburgerMenu .bar:nth-child(2) {
-		transform: rotateZ(45deg);
-	}
+    #topNavigation.active #hamburgerMenu .bar:nth-child(2) {
+        transform: rotateZ(45deg);
+    }
+}
