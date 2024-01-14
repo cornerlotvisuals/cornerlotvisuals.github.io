@@ -12,6 +12,7 @@
 		z-index: 1000;
 		-webkit-backdrop-filter: var(--banner-blur);
 		backdrop-filter: var(--banner-blur);
+		transition: all 0.6s ease;
 	}
 	
 	#topNavigation #logo {
@@ -20,6 +21,7 @@
 		margin-right: 20px;
 		margin-left: 10px;
 		filter: invert(1);
+		
 	}
 
 	#topNavigation #navigationButtons {
@@ -52,35 +54,72 @@
 	
 	@media screen and (max-width: 768px) {
 		
+		@keyframes fadeIn {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+		
+		@keyframes slideInFromTop {
+			from {
+    transform: translateY(-120%);
+		}
+			to {
+    transform: translateY(0);
+		}
+	}
+	
+	@keyframes slideOutToTop {
+			from {
+    transform: translateY(0);
+		}
+			to {
+    transform: translateY(-120%);
+		}
+	}
+		
 	#topNavigation.active {
 		position: fixed;
 		top: 0;
 		width: 100%;
 		height: 100vh;
 		display: flex;
-		align-items: center;
+		align-items: flex-start;
 		justify-content: space-between;
-		padding: 10px;
-		background-color: rgba(0, 0, 0, 0.3);
+		padding-top: 15px;
+		background: rgba(0, 0, 0, 0.8);
 		z-index: 1000;
 		-webkit-backdrop-filter: var(--banner-blur);
 		backdrop-filter: var(--banner-blur);
 	}
 	
 	#topNavigation #navigationButtons {
+		animation: fadeOut 0.5s ease;
         display: none; /* Hide buttons in normal view */
     }
 	
 	#topNavigation.active #navigationButtons {
         display: flex; /* Show buttons in hamburger menu view */
 		flex-direction: column; /* Display buttons in a column */
-    }
-
+		animation: slideInFromTop 0.5s ease;
+	}
 	
-    #navigationButtons {
-        display: none;
-    }
-
     #hamburgerMenu {
         display: block;
         cursor: pointer;
@@ -95,7 +134,7 @@
         height: 2px;
         background-color: var(--secondary-color);
         margin: 6px 0;
-        transition: 0.4s;
+        transition: 0.5s;
     }
 	
 	#topNavigation.active #hamburgerMenu .bar {
@@ -112,26 +151,3 @@
 	#topNavigation.active #hamburgerMenu .bar:nth-child(2) {
 		transform: rotateZ(45deg);
 	}
-
-
-    #navigationLinks {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.3);
-        z-index: 999;
-    }
-
-    #topNavigation.active #navigationLinks {
-        display: flex;
-    }
-
-    #navigationLinks button {
-        margin: 0;
-        margin-right: 0;
-    }
-}
-
