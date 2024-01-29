@@ -54,29 +54,40 @@ function filterArtworks(button, selectedCategory) {
     button.classList.add('active');
 }
 
-
 const handleHover = element => {
     const hoverCount = parseInt(element.getAttribute("data-hover-count")) || 0;
     const video = element.querySelector('video');
 
-    if (hoverCount === 0 && video.paused) {
-        // First hover: Show video and play
-        video.play().catch(error => {
-            // Handle the error (e.g., browser does not allow autoplay)
-            console.error("Error playing video:", error);
-        });
-    } else if (hoverCount === 1 && !video.paused) {
-        // Second hover: Pause video
-        if (!video.ended) {
-            video.pause();
-        }
-    } else if (hoverCount === 2 && video.paused) {
-        // Third hover: Resume video
-        if (!video.ended) {
+    // Check if the device is a mobile device
+    const isMobileDevice = window.innerWidth <= 767; // You can adjust this threshold based on your design
+
+    if (isMobileDevice) {
+        // For mobile devices, handle touch events
+        element.addEventListener('touchstart', function onTouchStart() {
             video.play().catch(error => {
-                // Handle the error (e.g., browser does not allow autoplay)
                 console.error("Error playing video:", error);
             });
+            element.removeEventListener('touchstart', onTouchStart);
+        });
+    } else {
+        // For non-mobile devices, handle hover events
+        if (hoverCount === 0 && video.paused) {
+            // First hover: Show video and play
+            video.play().catch(error => {
+                console.error("Error playing video:", error);
+            });
+        } else if (hoverCount === 1 && !video.paused) {
+            // Second hover: Pause video
+            if (!video.ended) {
+                video.pause();
+            }
+        } else if (hoverCount === 2 && video.paused) {
+            // Third hover: Resume video
+            if (!video.ended) {
+                video.play().catch(error => {
+                    console.error("Error playing video:", error);
+                });
+            }
         }
     }
 
@@ -94,7 +105,6 @@ const pauseVideo = element => {
 };
 
 const scrollFunction = () => {
-	// console.log("Scrolling!"); //for checking scroll
     const scrollTopButton = document.getElementById("scrollTopButton");
     const shouldDisplay = document.documentElement.scrollTop > 30;
     scrollTopButton.classList.toggle('visible', shouldDisplay);
@@ -121,6 +131,7 @@ const scrollToTop = (scrollDuration = 600, easingFunction = easeInOutCubic) => {
 
   requestAnimationFrame(scrollToTopAnimation);
 };
+
 
 // Example usage:
 // scrollToTop(); // Use default values
