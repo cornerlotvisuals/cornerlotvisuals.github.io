@@ -34,6 +34,20 @@
 		margin-bottom: 10px;
 	}
 
+	#heroBanner {
+		position: relative;
+		width: 100%; /* Adjust the width as needed */
+		height: 100vh; /* Set height to 100% of the viewport height */
+		overflow: hidden;
+		margin-bottom: 0px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		z-index: 0; /* Set a lower z-index for the img element */
+	}
+
+
+
 	/* Responsive styling for smaller screens */
 	@media (max-width: 768px) {
 		.client-columns {
