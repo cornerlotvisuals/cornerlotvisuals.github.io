@@ -6,7 +6,7 @@
 }
 
 .copyright-footer::before {
-    content: '\00a9 2024 - CLV All Rights Reserved.';
+    content: '\00a9 2024 - CLV (JM0999799-P) All Rights Reserved.';
     color: var(--secondary-color);
     font-size: var(--button-font-size);
     font-family: var(--font-family);
