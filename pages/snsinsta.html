@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="max-age=3600, public, stale-while-revalidate=604800">
+    <title>#SnacknStyle Instameet</title>
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=(), user-id=()" />
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap">
+    <link rel="stylesheet" href="../css/root.css">
+	<link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/totop.css">
+    <link rel="stylesheet" href="../css/footer.css">
+<style>
+    .video-container {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        margin-top: 75px;
+    }
+
+    .video-container iframe {
+        width: 100%;
+        height: calc(100vw * 9 / 16);
+        position: relative; /* Change from absolute to relative */
+        z-index: 0;
+    }
+	
+	.text-container {
+		width: 100%;
+		height: 100%;
+	}
+	
+	.text-container p {
+		font-family: var(--font-family);
+		color: var(--secondary-color);
+	}
+	
+	.text-container .title {
+		font-size: var(--title-text-size);
+	}
+	
+	.text-container .description {
+		font-size: var(--description-text-size);
+	}
+	
+	.prevnext {
+		display: flex;
+		justify-content: flex-end; /* Move the #prevnext div to the right */
+		align-items: center;
+		margin-right: 150px; /* Adjust the margin as needed */
+	}
+	
+	.prevnext p {
+		font-family: var(--font-family);
+		color: var(--secondary-color);
+	}
+
+	.prevnext button {
+		font-family: var(--font-family);
+		font-size: var(--main-button-font-size);
+		color: var(--secondary-color);
+		padding: 8px;
+		margin-right: 0px;
+		cursor: pointer;
+		border: none;
+		background: none;
+		text-decoration: none;
+		transition: all 0.3s ease;
+	}
+
+	.prevnext button:hover,
+	.prevnext button.active {
+		font-weight: bold;
+		text-decoration: underline;
+		color: var(--tertiary-color);
+	}
+
+</style>
+
+</head>
+<body>
+    <div id="topNavigation">
+        <div id="logo">
+            <a href="../index.html">
+                <img src="../images/logo.svg" alt="Company Logo" type="image/svg+xml">
+            </a>
+        </div>
+		
+        <div id="navigationButtons">
+            <button onclick="window.location.href='works.html'">Works</button>
+            <button onclick="window.location.href='about.html'">About</button>
+            <button onclick="window.location.href='form.html'">Contact Us</button>
+        </div>
+			<div id="hamburgerMenu" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    </div>
+
+    <div class="video-container">
+        <!-- Replace 'YOUR_YOUTUBE_EMBED_URL' with your actual YouTube video embed URL -->
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/UHQVgxaZjyo?rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+    </div>
+	
+	<div class="text-container">
+	<p class="title"><strong>#SnacknStyle Instameet</strong></p>
+	<p class = "description">Video Produce by CornerLot Visuals<br>
+	Videographer: umarulharry/Irsyad<br>Editor: umarulharry<br>Motion Graphic: umarulharry</p>
+	</div>
+	
+	<div class="prevnext">
+	<button onclick="window.location.href='MGMinfo.html'">prev</button>
+	</div>
+    <footer class="copyright-footer"></footer>
+
+    <button id="scrollTopButton" onclick="scrollToTop()"><svg role="img" viewBox="0 0 24 24" width="24" height="24" xmlns="http://www.w3.org/2000/svg"><title>Palo Alto Software</title><path d="M11.995.005c-.58 0-1.158.228-1.615.685L.685 10.385c-.913.913-.913 2.318 0 3.231l.842.843 8.01-8.15a3.435 3.435 0 0 1 4.847 0l8.079 8.08.842-.843c.914-.843.915-2.248.072-3.161L13.612.69a2.279 2.279 0 0 0-1.617-.685zm0 6.463c-.58 0-1.158.228-1.615.684L.685 16.848c-.913.913-.913 2.318 0 3.23l3.231 3.232c.914.913 2.318.913 3.232 0l4.847-4.846 4.848 4.846c.913.913 2.318.913 3.231 0l3.231-3.231c.914-.843.915-2.318.072-3.231l-9.765-9.696a2.279 2.279 0 0 0-1.617-.684z"/></svg></button>
+
+    <script src="../js/totop.js" defer></script>
+	<script src="../js/smoothscroll.js" defer></script>
+	<script src="../js/ham.js" defer></script>
+
+</body>
+</html>
