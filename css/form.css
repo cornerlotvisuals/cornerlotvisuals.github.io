@@ -75,8 +75,15 @@ a, p, h2 {
 	color: var(--secondary-color);
 	font-family: var(--font-family);
 	text-align: center;
+	transition: all 0.3s ease;
 }
 
+a:hover,
+a.active {
+	font-weight: bold;
+	color: var(--tertiary-color);
+	text-decoration: underline;
+}
 /* Media query for mobile devices */
 @media (max-width: 768px) {
 	#contentcontainer {

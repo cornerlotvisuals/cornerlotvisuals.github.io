@@ -1,3 +1,18 @@
+	h2 {
+		font-family: var(--font-family);
+		color: var(--secondary-color);
+		padding-top: 80px;
+	}
+
+	p {
+		font-family: var(--font-family);
+		color: var(--secondary-color);
+	}
+
+	#introtext {
+		width: 50%;
+	}
+
 	.prev-client {
 		text-align: center;
 		margin: 50px auto; /* Adjust the top margin as needed, and set auto for horizontal centering */
