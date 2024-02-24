@@ -1,31 +1,80 @@
-	.submission-container {
-				background-color: var(--secondary-color);
-				border-radius: 8px;
-				box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-				padding: 20px;
-				text-align: center;
-				margin: auto;
-				margin-top: 150px;
-				margin-bottom: 20px;
-				width: 300px;
-				max-width: 100%;
-			}
+body {
+    display: flex; /* Use flexbox for the body */
+}
 
-			h3 {
-				color: var(--primary-color);
-			}
+#contentcontainer {
+    display: flex; /* Use flexbox for the content container */
+    flex-grow: 1; /* Allow content container to grow and fill remaining space */
+}
 
-			.submit-another {
-				background-color: var(--primary-color);
-				color: var(--secondary-color);
-				padding: 10px;
-				border: none;
-				border-radius: 4px;
-				cursor: pointer;
-				margin-top: 20px;
-				transition: background-color 0.3s ease; /* Smooth transition on hover */
-			}
+#leftContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 50%;
+}
 
-			.submit-another:hover {
-				background-color: var(--tertiary-color);
-			}
+#formContainer {
+    background-color: var(--secondary-color);
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+	text-align: center;
+	margin: auto;
+	margin-top: 150px;
+	margin-bottom: 20px;
+	width: 300px;
+	max-width: 100%;
+	justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+button:hover {
+    background-color: var(--tertiary-color);
+}
+
+a, p, h2 {
+	text-decoration: none;
+	color: var(--secondary-color);
+	font-family: var(--font-family);
+	text-align: center;
+	transition: all 0.3s ease;
+}
+
+a:hover,
+a.active {
+	font-weight: bold;
+	color: var(--tertiary-color);
+	text-decoration: underline;
+}
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+	#contentcontainer {
+	    display: flex;
+	    flex-direction: column; /* Stack items vertically on mobile */
+	    justify-content: center; /* Center items horizontally */
+	    align-items: center; /* Center items vertically */
+	    padding-top: 100px;
+	}
+
+    #leftContent {
+        width: 80%; /* Take up full width on mobile */
+    }
+
+    #formContainer {
+        width: 80%; /* Take up full width on mobile */
+    }
+}

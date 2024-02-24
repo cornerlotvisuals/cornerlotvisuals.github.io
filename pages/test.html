@@ -66,10 +66,9 @@ title: ContactUs
   gtag('config', 'G-MVCCPCPRD8');
 </script>
 	
-    <script>
-        function redirectToForm() {
-            window.location.href = "form.html";
-        }
+    <script type="text/javascript">
+        var submitted = false;
     </script>
+    <iframe name="hiddenConfirm" id="hiddenConfirm" style="display:none;" onload="if(submitted){window.location='submission.html';}"></iframe>
 </body>
 </html>
