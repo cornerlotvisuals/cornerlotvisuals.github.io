@@ -2,4 +2,4 @@ defaults:
   - scope:
       path: "pages"
     values:
-      permalink: /:basename
+      permalink: /:title
