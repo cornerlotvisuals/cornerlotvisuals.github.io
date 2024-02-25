@@ -7,7 +7,7 @@
                 seconds--;
                 if (seconds < 0) {
                     clearInterval(timer);
-                    window.location.href = "index.html"; // Redirect to the home page
+                    window.location.href = "../index.html"; // Redirect to the home page
                 }
             }, 1000);
         }
