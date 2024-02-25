@@ -266,4 +266,10 @@
         <changefreq>always</changefreq>
         <priority>0.5</priority>
     </url>
+    <url>
+        <loc>https://cornerlotvisuals.com/404</loc>
+        <lastmod>2024-02-21</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
 </urlset>
