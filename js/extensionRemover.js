@@ -1,17 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
     var url = window.location.href;
-    url = url.split('.html')[0];
-    window.history.replaceState( null, null, url );
-});
-
-document.addEventListener("DOMContentLoaded", function() {
-    var url = window.location.href;
-    url = url.split('/index')[0];
-    window.history.replaceState( null, null, url );
-});
-
-document.addEventListener("DOMContentLoaded", function() {
-    var url = window.location.href;
-    url = url.split('/pages')[0];
-    window.history.replaceState( null, null, url );
+    // Remove '/pages' from the URL
+    var urlWithoutPages = url.replace('/pages', '');
+    // Remove '/index' from the URL
+    var urlWithoutIndex = urlWithoutPages.replace('/index', '');
+    // Remove '.html' from the URL
+    var urlWithoutHtml = urlWithoutIndex.replace('.html', '');
+    window.history.replaceState(null, null, urlWithoutHtml);
 });
