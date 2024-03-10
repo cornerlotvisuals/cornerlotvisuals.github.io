@@ -11,5 +11,7 @@
       
    Official Website for [Cornerlotvisuals](cornerlotvisuals.com)
 
+   We crafting captivating visuals tailored to your unique vision. Excellence, innovation, and creativity backed by industry collaborations.
+
 > [!NOTE]
-> If you find something in the web that interest you please contact us at [email](mailto:cornerlotvisuals@gmail.com)
+> If you find something in the web that interest you please dont hesitate to [email](mailto:cornerlotvisuals@gmail.com) us
