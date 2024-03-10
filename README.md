@@ -1,5 +1,4 @@
-# [cornerlotvisuals.com](cornerlotvisuals.com)
-
+# cornerlotvisuals.com
              .oooooo.   ooooo        oooooo     oooo 
            d8P'  `Y8b  `888'         `888.     .8'  
          888           888           `888.   .8'   
