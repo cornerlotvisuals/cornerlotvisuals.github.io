@@ -21,4 +21,3 @@ function handleOverscroll(deltaY) {
     }, 100);
   }
 }
-    });
