@@ -1,0 +1,9 @@
+<capcut>
+	<video>
+		{h264}
+		{720p}
+		{25fps}
+		{low}
+	<photo>
+		{720p}
+		{jpeg}
