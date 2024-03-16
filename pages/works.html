@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="Cache-Control" content="max-age=3600, public, stale-while-revalidate=604800">
     <title>Our Portfolio ? - Cornerlotvisuals</title>
-    <meta name="description" content="collection to the works we have done. The collection contains the best work throughout the establishment of cornerlotvisuals. the collection consists of music videos, corporate videos, motiongraphics, montages, 3d works and many more.">
+    <meta name="description" content="collection to the works we have done. The collection contains the best work throughout the establishment of cornerlotvisuals. the collection consists of music videos, commercial videos, motiongraphics, montages, 3d works and many more.">
 	<meta http-equiv="Permissions-Policy" content="interest-cohort=(), user-id=()" />
     <link rel="canonical" href="https://cornerlotvisuals.com/pages/works" />
 	<link rel="icon" href="../images/favicon.ico" type="image/x-icon">
@@ -41,9 +41,9 @@
     <div id="categoryButtons">
         <p class="paragraph">OUR WORKS</p>
         <button onclick="filterArtworks(this, 'all')" class="active" data-category="all">All</button>
-        <button onclick="filterArtworks(this, 'corporate')">Corporate</button>
-        <button onclick="filterArtworks(this, 'sports')">Sports</button>
         <button onclick="filterArtworks(this, 'music')">Music Video</button>
+        <button onclick="filterArtworks(this, 'commercial')">Commercial</button>
+        <button onclick="filterArtworks(this, 'event')">Event</button>
 		<button onclick="filterArtworks(this, 'lyric')">Lyric Video</button>
         <!-- Add more buttons for additional categories -->
     </div>
@@ -53,9 +53,51 @@
         <!-- artwork entries  -->
 
         <div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
+            data-category="event">
+            <img src="../vidprev/redoxjb.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-47" loading="lazy">
+            <video muted playsinline loop class="projvd small playing" id="portfolio-video-47" loading="lazy">
+                <source src="../vidprev/redoxjb.mp4?v=1" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="redoxjb.html">
+                <div class="overlay">
+                    <div class="overlay-text">Redox Road Tour (Johor)</div>
+                </div>
+            </a>
+        </div>
+
+        <div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
+            data-category="commercial">
+            <img src="../vidprev/masteryxero.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-46" loading="lazy">
+            <video muted playsinline loop class="projvd small playing" id="portfolio-video-46" loading="lazy">
+                <source src="../vidprev/masteryxero.mp4?v=1" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="masteryxero.html">
+                <div class="overlay">
+                    <div class="overlay-text">The Mastery. This Is XeroMarkets.</div>
+                </div>
+            </a>
+        </div>
+
+        <div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
+            data-category="commercial">
+            <img src="../vidprev/rayaxero.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-45" loading="lazy">
+            <video muted playsinline loop class="projvd small playing" id="portfolio-video-45" loading="lazy">
+                <source src="../vidprev/rayaxero.mp4?v=1" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a href="rayaxero.html">
+                <div class="overlay">
+                    <div class="overlay-text">Raya Bersama XeroMarkets !</div>
+                </div>
+            </a>
+        </div>
+
+        <div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
             data-category="music">
             <img src="../vidprev/zanotti.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-44" loading="lazy">
-            <video muted playsinline loop class="projvd small playing" id="portfolio-video-43" loading="lazy">
+            <video muted playsinline loop class="projvd small playing" id="portfolio-video-44" loading="lazy">
                 <source src="../vidprev/zanotti.mp4?v=1" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -403,7 +445,7 @@
         </div>
 		
 		<div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
-            data-category="corporate">
+            data-category="event">
             <img src="../vidprev/kaneAP.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-19" loading="lazy">
             <video muted playsinline loop class="projvd small playing" id="portfolio-video-19" loading="lazy">
                 <source src="../vidprev/kaneAP.mp4?v=1" type="video/mp4">
@@ -417,7 +459,7 @@
         </div>
 		
 		<div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
-            data-category="corporate">
+            data-category="event">
             <img src="../vidprev/nubeLP.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-18" loading="lazy">
             <video muted playsinline loop class="projvd small playing" id="portfolio-video-18" loading="lazy">
                 <source src="../vidprev/nubeLP.mp4?v=1" type="video/mp4">
@@ -431,7 +473,7 @@
         </div>
 		
 		<div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
-            data-category="corporate">
+            data-category="event">
             <img src="../vidprev/elementLP.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-17" loading="lazy">
             <video muted playsinline loop class="projvd small playing" id="portfolio-video-17" loading="lazy">
                 <source src="../vidprev/elementLP.mp4?v=1" type="video/mp4">
@@ -445,7 +487,7 @@
         </div>
 		
 		<div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
-            data-category="sports">
+            data-category="event">
             <img src="../vidprev/GSrunwiththestar.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-16" loading="lazy">
             <video muted playsinline loop class="projvd small playing" id="portfolio-video-16" loading="lazy">
                 <source src="../vidprev/GSrunwiththestar.mp4?v=1" type="video/mp4">
@@ -459,7 +501,7 @@
         </div>
 		
 		<div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
-            data-category="corporate">
+            data-category="commercial">
             <img src="../vidprev/KBSDIGTV.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-15" loading="lazy">
             <video muted playsinline loop class="projvd small playing" id="portfolio-video-15" loading="lazy">
                 <source src="../vidprev/KBSDIGTV.mp4?v=1" type="video/mp4">
@@ -473,7 +515,7 @@
         </div>
 		
 		<div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
-            data-category="corporate">
+            data-category="event">
             <img src="../vidprev/fenix5L.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-14" loading="lazy">
             <video muted playsinline loop class="projvd small playing" id="portfolio-video-14" loading="lazy">
                 <source src="../vidprev/fenix5L.mp4?v=1" type="video/mp4">
@@ -487,7 +529,7 @@
         </div>
 		
 		<div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
-            data-category="corporate">
+            data-category="event">
             <img src="../vidprev/petco2018.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-13" loading="lazy">
             <video muted playsinline loop class="projvd small playing" id="portfolio-video-13" loading="lazy">
                 <source src="../vidprev/petco2018.mp4?v=1" type="video/mp4">
@@ -501,7 +543,7 @@
         </div>
 		
 		<div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
-            data-category="corporate">
+            data-category="event">
             <img src="../vidprev/hafizatseminar.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-12" loading="lazy">
             <video muted playsinline loop class="projvd small playing" id="portfolio-video-12" loading="lazy">
                 <source src="../vidprev/hafizatseminar.mp4?v=1" type="video/mp4">
@@ -515,7 +557,7 @@
         </div>
 		
 		<div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
-            data-category="corporate">
+            data-category="commercial">
             <img src="../vidprev/NOIRsuccess.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-11" loading="lazy">
             <video muted playsinline loop class="projvd small playing" id="portfolio-video-11" loading="lazy">
                 <source src="../vidprev/NOIRsuccess.mp4?v=1" type="video/mp4">
@@ -529,7 +571,7 @@
         </div>
 		
 		<div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
-            data-category="corporate">
+            data-category="event">
             <img src="../vidprev/kopathaL.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-10" loading="lazy">
             <video muted playsinline loop class="projvd small playing" id="portfolio-video-10" loading="lazy">
                 <source src="../vidprev/kopathaL.mp4?v=1" type="video/mp4">
@@ -543,7 +585,7 @@
         </div>
 		
 		<div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
-            data-category="sports">
+            data-category="commercial">
             <img src="../vidprev/jdxarmani.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-09" loading="lazy">
             <video muted playsinline loop class="projvd small playing" id="portfolio-video-09" loading="lazy">
                 <source src="../vidprev/jdxarmani.mp4?v=1" type="video/mp4">
@@ -557,7 +599,7 @@
         </div>
 		
 		<div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
-            data-category="corporate">
+            data-category="commercial">
             <img src="../vidprev/lp2021.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-08" loading="lazy">
             <video muted playsinline loop class="projvd small playing" id="portfolio-video-08" loading="lazy">
                 <source src="../vidprev/lp2021.mp4?v=1" type="video/mp4">
@@ -571,7 +613,7 @@
         </div>
 		
 		<div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
-            data-category="corporate">
+            data-category="commercial">
             <img src="../vidprev/glamx.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-07" loading="lazy">
             <video muted playsinline loop class="projvd small playing" id="portfolio-video-07" loading="lazy">
                 <source src="../vidprev/glamx.mp4?v=1" type="video/mp4">
@@ -585,7 +627,7 @@
         </div>
 		
 		<div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
-            data-category="corporate">
+            data-category="event">
             <img src="../vidprev/bloconomic.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-06" loading="lazy">
             <video muted playsinline loop class="projvd small playing" id="portfolio-video-06" loading="lazy">
                 <source src="../vidprev/bloconomic.mp4?v=1" type="video/mp4">
@@ -599,7 +641,7 @@
         </div>
 		
 		<div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
-            data-category="corporate">
+            data-category="commercial">
             <img src="../vidprev/CIStyle.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-05" loading="lazy">
             <video muted playsinline loop class="projvd small playing" id="portfolio-video-05" loading="lazy">
                 <source src="../vidprev/CIStyle.mp4?v=1" type="video/mp4">
@@ -613,7 +655,7 @@
         </div>
 		
 		<div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
-            data-category="corporate">
+            data-category="event">
             <img src="../vidprev/IGEMS.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-04" loading="lazy">
             <video muted playsinline loop class="projvd small playing" id="portfolio-video-04" loading="lazy">
                 <source src="../vidprev/IGEMS.mp4?v=1" type="video/mp4">
@@ -627,7 +669,7 @@
         </div>
 		
 		<div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
-            data-category="corporate">
+            data-category="commercial">
             <img src="../vidprev/YAWASinfo.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-03" loading="lazy">
             <video muted playsinline loop class="projvd small playing" id="portfolio-video-03" loading="lazy">
                 <source src="../vidprev/YAWASinfo.mp4?v=1" type="video/mp4">
@@ -641,7 +683,7 @@
         </div>
 		
 		<div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
-            data-category="corporate">
+            data-category="commercial">
             <img src="../vidprev/MGMinfo.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-02" loading="lazy">
             <video muted playsinline loop class="projvd small playing" id="portfolio-video-02" loading="lazy">
                 <source src="../vidprev/MGMinfo.mp4?v=1" type="video/mp4">
@@ -655,7 +697,7 @@
         </div>
 		
 		<div class="portfolio-img-inner" onmouseenter="handleHover(this)" onmouseleave="pauseVideo(this)"
-            data-category="corporate">
+            data-category="event">
             <img src="../vidprev/snsinsta.jpg?v=1" alt="Placeholder Image" class="playing" id="portfolio-image-01" loading="lazy">
             <video muted playsinline loop class="projvd small playing" id="portfolio-video-01" loading="lazy">
                 <source src="../vidprev/snsinsta.mp4?v=1" type="video/mp4">
