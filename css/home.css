@@ -91,10 +91,14 @@
 
 	#videoOverlay h2 {
 	    margin-bottom: 10px;
+	    margin-left: 20px;
+	    margin-left: 20px;
 	}
 
 	#videoOverlay p {
 	    margin: 0;
+	    margin-left: 20px;
+	    margin-left: 20px;
 	    padding: 0 20px; /* Adjust as needed */
 	}
 
@@ -114,6 +118,8 @@
 	    #videoOverlay h2,
 	    #videoOverlay p {
 	        margin: 10px 0;
+	        margin-left: 20px;
+	    	margin-left: 20px;
 	        padding: 0;
 	    }
 
