@@ -151,7 +151,6 @@ main {
         opacity: 1; /* Ensure the text is always visible on mobile */
         justify-content: flex-end; /* Align text to the bottom */
         padding-bottom: 20px; /* Add some padding at the bottom */
-        background-color: rgba(0, 0, 0, 0.5); /* Add a background color for better readability */
     }
 
     .overlay-text {
@@ -166,7 +165,6 @@ main {
         opacity: 1; /* Ensure the text is always visible on mobile */
         justify-content: flex-end; /* Align text to the bottom */
         padding-bottom: 20px; /* Add some padding at the bottom */
-        background-color: rgba(0, 0, 0, 0.5); /* Add a background color for better readability */
     }
 
     .overlay-text {
