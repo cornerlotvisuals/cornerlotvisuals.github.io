@@ -78,4 +78,14 @@
 	        margin: 10px 0;
 	        padding: 0;
 	    }
+
+	    #scrollToVideoButton {
+	    bottom: 60px; /* Adjust top position as needed */
+		}
+
+		#scrollToVideoButton:hover,
+		#scrollToVideoButton.active {
+			filter: invert(76%) sepia(100%) saturate(1000%) hue-rotate(-45deg) brightness(110%) contrast(100%);
+			bottom: 58px; /* Adjust top position as needed */
+		}
 	}
