@@ -24,6 +24,11 @@
 		transition: all 0.3s ease;
 	}
 
+	#topNavigation #logo:hover,
+	#topNavigation #logo.active {
+		filter: invert(76%) sepia(100%) saturate(1000%) hue-rotate(-45deg) brightness(110%) contrast(100%);
+	}
+
 	#topNavigation #navigationButtons {
 		display: flex;
 		margin-left: auto; /* Add this line to push buttons to the right */
