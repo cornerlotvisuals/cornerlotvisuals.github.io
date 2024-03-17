@@ -9,7 +9,7 @@
       
         Cornerlotvisulas | Conceptual Video & Arts
       
-   Official Website for [Cornerlotvisuals](cornerlotvisuals.com)
+   Official Website for [Cornerlotvisuals](https://www.cornerlotvisuals.com/)
 
    We crafting captivating visuals tailored to your unique vision. Excellence, innovation, and creativity backed by industry collaborations.
 

@@ -140,10 +140,9 @@
 	}
 
 	#letsgoLink p {
-		margin-right: 20px;
 		size: clamp(1rem, 5rem, 10rem);
 		color: var(--secondary-color);
-		text-align: right;
+		text-align: center;
 	}
 
 	@media screen and (max-width: 900px) {
