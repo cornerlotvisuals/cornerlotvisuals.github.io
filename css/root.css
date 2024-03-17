@@ -7,6 +7,11 @@
 		font-display: swap;
 	}
 
+	@font-face {
+    font-family: conthrax;
+    src: url('../font/conthrax.otf');
+}
+
 	:root {
 		--font-family: 'Montserrat', sans-serif;
 		--button-font-size: 0.625rem; /* 10px */
