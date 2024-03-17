@@ -35,6 +35,24 @@
             }
         }
 
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        h3 {
+        	top: 60%;
+        	position: absolute;
+        	z-index: 1;
+        	color: var(--tertiary-color);
+        	font-size: clamp(1rem, 2vw, 2rem);
+        	animation: fadeIn 2s ease forwards;;
+        }
+
 	#heroBanner {
 		position: relative;
 		width: 100%; /* Adjust the width as needed */
