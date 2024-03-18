@@ -1,0 +1,101 @@
+	#heroBanner {
+		    position: relative;
+		    width: 100%;
+		    height: 100vh;
+		    overflow: hidden;
+		    margin-bottom: 0px;
+		    display: flex;
+		    justify-content: center;
+		    align-items: center;
+		    z-index: 0;
+		}
+
+		#heroBanner img {
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    width: 100%;
+		    height: 100%;
+		    object-fit: cover; /* Ensures the image covers the entire container */
+		    z-index: -1; /* Set a lower z-index for the image to keep it behind other content */
+		    mask-image: linear-gradient(to top, transparent 20%, black); /* Mask with linear gradient */
+    -webkit-mask-image: linear-gradient(to top, transparent 20%, black); /* For webkit browsers */
+		}
+
+	.name, .outline-name {
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-size: clamp(1.7rem, 4vw, 6rem);
+            font-family: conthrax;
+            white-space: nowrap; /* Prevent line breaks */
+            overflow: hidden; /* Hide overflowed text */
+        }
+
+        .name {
+            z-index: 1; /* Ensure title is above outline text */
+            color: transparent; /* Transparent text */
+            -webkit-text-stroke: 2px var(--tertiary-color); /* Outline */
+            text-stroke: 2px #333; /* Outline */
+            animation: fadeInAndExpand 3s ease forwards; /* Adjust duration to slow down */
+        }
+
+        .outline-name {
+            z-index: 0; /* Ensure outline text is behind title */
+            color: var(--tertiary-color); /* Text color */
+            animation: fadeInAndExpand 3s ease forwards; /* Adjust duration to slow down */
+        }
+
+        @keyframes fadeInAndExpand {
+            from {
+                letter-spacing: 5px;
+                opacity: 0;
+            }
+            to {
+                letter-spacing: normal;
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .desc {
+		    top: 50%;
+		    left: 50%; /* horizontally center */
+		    transform: translate(-50%, -50%);
+		    position: absolute;
+		    z-index: 1;
+		    color: var(--tertiary-color);
+		    font-size: clamp(1rem, 2vw, 2rem);
+		    animation: fadeIn 2s ease forwards;
+		    text-align: center; /* horizontally center the text */
+		}
+
+		.social-media-buttons {
+		    position: absolute;
+		    bottom: 5%;
+		    left: 50%;
+		    transform: translateX(-50%);
+		    z-index: 1;
+		}
+
+		.social-media-buttons a {
+		    display: inline-block;
+		    margin: 0 10px;
+		    text-decoration: none;
+		    color: var(--secondary-color); /* Adjust color as needed */
+		    font-size: 24px; /* Adjust size as needed */
+		}
+
+		.social-media-buttons a:hover {
+		    color: var(--tertiary-color);
+		}
