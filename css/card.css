@@ -112,7 +112,6 @@
 		    text-decoration: none;
 		    color: var(--secondary-color); /* Adjust color as needed */
 		    font-size: clamp(2.5rem, 5vw, 6rem); /* Adjust size as needed */
-		    padding: 10px;
 		}
 
 		.other-buttons a {
