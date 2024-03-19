@@ -22,11 +22,23 @@
     -webkit-mask-image: linear-gradient(to top, transparent 20%, black); /* For webkit browsers */
 		}
 
+		/.content-wrapper {
+		    position: absolute;
+		    top: 50%;
+		    left: 50%;
+		    transform: translate(-50%, -50%);
+		    z-index: 1;
+		    text-align: center;
+		    max-width: 600px; /* Adjust the value as needed */
+		    width: 90%; /* Optional: Set a percentage width to ensure responsiveness */
+		    margin: 0 auto; /* Center the element horizontally */
+		}
+
+
 	.name, .outline-name {
             position: absolute;
-            top: 35%;
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, -230%);
             text-align: center;
             font-size: clamp(1.7rem, 4vw, 6rem);
             font-family: conthrax;
@@ -78,6 +90,7 @@
 		    font-size: clamp(1rem, 2vw, 2rem);
 		    animation: fadeIn 2s ease forwards;
 		    text-align: center; /* horizontally center the text */
+		    white-space: nowrap;
 		}
 
 		.social-media-buttons {
@@ -86,16 +99,30 @@
 		    left: 50%;
 		    transform: translateX(-50%);
 		    z-index: 1;
+		    text-align: center; /* Center align all buttons */
 		}
 
-		.social-media-buttons a {
+		.contact-buttons {
+		    margin-bottom: clamp(6rem, 5vw, 8rem); /* Add some space between the button groups */
+		}
+
+		.contact-buttons a {
 		    display: inline-block;
 		    margin: 0 10px;
 		    text-decoration: none;
 		    color: var(--secondary-color); /* Adjust color as needed */
-		    font-size: 24px; /* Adjust size as needed */
+		    font-size: clamp(2.5rem, 5vw, 6rem); /* Adjust size as needed */
 		}
 
-		.social-media-buttons a:hover {
-		    color: var(--tertiary-color);
+		.other-buttons a {
+		    display: inline-block;
+		    margin: 0 10px;
+		    text-decoration: none;
+		    color: var(--secondary-color); /* Adjust color as needed */
+		    font-size: 20px; /* Adjust size as needed */
+		}
+
+		.contact-buttons a:hover,
+		.other-buttons a:hover {
+		    color: var(--tertiary-color); /* Adjust hover color as needed */
 		}
